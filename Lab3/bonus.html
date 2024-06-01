@@ -1,0 +1,57 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bonus</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <input type="text" name="userName" id="userName" onkeypress="return checkInputs(event)"
+        placeholder="Enter User Name">
+
+
+    <h1>Countdown to Graduation</h1>
+    <div id="countdown"></div>
+
+    <script src="./JS/bonus.js"></script>
+</body>
+
+</html> -->
+
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Child Frame</title>
+    <script>
+        <!-- window.addEventListener("beforeunload", (event) => {
+            console.log("I am the 2nd one.");
+        });
+        window.addEventListener("unload", (event) => {
+            console.log("I am the 4th and last one…");
+        });
+
+        onunload = function () {
+            var win = open("http://www.google.com", "_blank");
+            win.alert("Thanks for Visiting My Website");
+        }; -->
+
+        window.addEventListener('beforeunload', function (event) {
+            event.preventDefault();
+            event.returnValue = '';
+            alert("Thanks for Visiting My Website");
+            var win = open("http://www.google.com", "_blank");
+            win.alert("Thanks for Visiting My Website");
+        });
+    </script>
+</head>
+
+<body>
+    <a href="http://www.google.com" target="_blank">Google</a>
+</body>
+
+</html>

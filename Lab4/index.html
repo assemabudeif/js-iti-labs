@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #registerForm {
+            width: 25%;
+            height: auto;
+            margin: auto;
+            padding: 25px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10%;
+            position: relative;
+            font-size: 1.2em;
+            z-index: 1;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        input[type="checkbox"] {
+            display: inline;
+            width: auto;
+            font-size: 1em;
+        }
+
+        button {
+            width: 100%;
+            padding: 20px;
+            background-color: rgb(199, 130, 130);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: rgb(107, 11, 11);
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="registerForm">
+        <form action="./thankyou.html" method="get" id="regForm">
+            <input type="text" name="fullName" id="fullName" placeholder="Enter your full name" required>
+            &#160;
+            <span id="fullNameValidation"></span>
+            <br>
+            <input type="email" required name="email" id="email" placeholder="Enter your email">
+            &#160;
+            <br>
+            <select name="city" id="city">
+                <option value="cairo">Cairo</option>
+                <option value="giza">Giza</option>
+                <option value="faiyum">Faiyum</option>
+                <option value="minya" selected>Minya</option>
+                <option value="beni">Beni Suef</option>
+                <option value="port">Port Said</option>
+                <option value="ismailia">Ismailia</option>
+                <option value="suez">Suez</option>
+                <option value="damietta">Damietta</option>
+                <option value="sharqia">Sharqia</option>
+                <option value="alex">Alexandria</option>
+                <option value="aswan">Aswan</option>
+                <option value="luxor">Luxor</option>
+                <option value="sharm">Sharm El Sheikh</option>
+                <option value="hurghada">Hurghada</option>
+                <option value="dahab">Dahab</option>
+                <option value="taba">Taba</option>
+                <option value="marsa">Marsa Alam</option>
+            </select>
+            &#160;
+            <br>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required>
+            &#160;
+            <br>
+            <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Repeat your password"
+                required>
+            &#160;
+            <span id="repeatPasswordValidation"></span>
+            <br>
+            <input type="checkbox" name="terms" id="terms"> I accept the terms and conditions <br>
+            &#160;
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
